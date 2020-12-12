@@ -3,9 +3,9 @@ import React from 'react';
 export class Track extends React.Component{
     renderAction() {
         if (this.props.isRemoval){
-            <button className="Track-action">-</button>
+            return <button className="Track-action">-</button>
         } else {
-            <button className="Track-action">+</button>
+           return <button className="Track-action">+</button>
         }
     }
     
@@ -13,10 +13,10 @@ export class Track extends React.Component{
         return (
             <div className="Track">
                 <div className="Track-information">
-                    <h3> track name will go here </h3>
-                    <p> track artist will go here | track album will go here</p>
+                    <h3> track name </h3>
+                    <p> track artist | track album</p>
                 </div>
-                {this.renderAction}
+                {this.renderAction()}
             </div>
         )
     }

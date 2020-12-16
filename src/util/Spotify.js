@@ -1,6 +1,6 @@
 import { SearchBar } from "../Components/SearchBar/SearchBar";
 
-let  accessToken;
+let accessToken;
 let clientId = 'f5095fc963534c219ccaf97117b90e9f';
 let redirectUri = 'http://localhost:3000/';
 
@@ -27,7 +27,7 @@ const Spotify = {
     },
     
     search(term) {
-        accessToken = Spotify.getAccessToken();
+        const accessToken = Spotify.getAccessToken();
         return fetch(`https://api.spotify.com/v1/search?type=track&q=${term}`, {
             headers: {
                 Authorization: `Bearer ${accessToken}`
@@ -35,7 +35,7 @@ const Spotify = {
         }).then(response => {
             return response.json();
         }).then(jsonResponse => {
-            if (!jsonResponse){
+            if (!jsonResponse.tracks){
                 return [];
             }
 

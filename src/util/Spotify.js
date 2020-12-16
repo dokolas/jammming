@@ -2,7 +2,7 @@ import { SearchBar } from "../Components/SearchBar/SearchBar";
 
 let accessToken;
 let clientId = 'f5095fc963534c219ccaf97117b90e9f';
-let redirectUri = 'http://localhost:3000/';
+let redirectUri = 'https://spiro.rocks/projects/jamming/';
 
 const Spotify = {
     getAccessToken() {

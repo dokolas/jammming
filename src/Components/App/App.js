@@ -12,8 +12,7 @@ export class App extends React.Component{
 
     this.state = {
       searchResults: [],
-      playlistName: 
-        'Super Awesome Playlist',
+      playlistName: '',
       playlistTracks: []
     };
     this.addTrack = this.addTrack.bind(this);

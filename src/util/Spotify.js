@@ -2,7 +2,7 @@ import { SearchBar } from "../Components/SearchBar/SearchBar";
 
 let accessToken;
 let clientId = 'f5095fc963534c219ccaf97117b90e9f';
-let redirectUri = 'https://spiro.rocks/projects/jamming/';
+let redirectUri = 'http://localhost:3000/';
 
 const Spotify = {
     getAccessToken() {
@@ -44,7 +44,8 @@ const Spotify = {
                 name: track.name,
                 artist: track.artists[0].name,
                 album: track.album.name,
-                uri: track.uri
+                uri: track.uri,
+                preview: track.preview_url
             }))
         })
     },
